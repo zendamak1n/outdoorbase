@@ -65,7 +65,7 @@ img {
 }
 
 
-/* nav hoer */
+/* nav hover */
 .hover{
 	text-align: left;
   position: absolute;
@@ -203,10 +203,12 @@ li.heroimg4{
   border-bottom:solid 4px #00281c;
   box-sizing: border-box;
 }
-.side-list>li>a:active{
-	position: relative;
-	top:4px;
-	border-bottom: solid 1px #00281c;
+@media screen and (min-width: 961px){
+  .side-list>li>a:active{
+  	position: relative;
+  	top:4px;
+  	border-bottom: solid 1px #00281c;
+  }
 }
 .side-list>li::after{
   content: "";
