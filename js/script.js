@@ -45,7 +45,7 @@ $(document).ready(function() {
 	$('.bxslider').bxSlider({
 		mode: 'fade',
 		speed: 1000,
-		pause: 3000,
+		pause: 3500,
 		auto: true,
 		pager: true,
 		controls: false,
