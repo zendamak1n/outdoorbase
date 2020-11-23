@@ -1,11 +1,16 @@
 @charset "utf-8";
 
 /*--- CSS ---*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+
 html {
   font-size: 62.5%;
 }
 body {
   font-size: 1.6rem;
+  letter-spacing: 0.1em;
+  font-feature-settings: "palt";
+  font-family: 'Noto Sans JP', sans-serif;
 }
 img {
   max-width: 100%;
@@ -22,6 +27,9 @@ img {
 }
 .br-pc{
   display: block;
+}
+.fas{
+  margin-left: 0.5em;
 }
 
 /* -------------
@@ -114,7 +122,9 @@ img {
 
 
 /* /nav hover */
-
+/*-----------
+    Hero image
+-------------  */
 .heroimg{
   background-size: cover;
   width: 100%;
@@ -156,7 +166,78 @@ li.heroimg4{
   bottom: 83px;
   filter: drop-shadow(-5.196px 3px 4px #000000);
   line-height: 1.2;
+  animation: SlideIn 1.6s;
 }
+/* CSSアニメーションの設定 */
+@keyframes SlideIn {
+  0% {
+    opacity: 0;/*初期状態では透明に*/
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* top button */
+a.top-btn {
+  width: 155px;
+  height: 155px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: solid 5px var(--main-color);
+  border-radius: 50%;
+  font-size: 3.2rem;
+  position: absolute;
+  right: 80px;
+  bottom: 83px;
+  text-align: center;
+  text-decoration: none;
+}
+a.top-btn>span{
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.booking {
+  display: inline-block;
+  width: 168px;
+  height: 40px;
+  border-radius: 5px;
+  line-height: 40px;
+  white-space: nowrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+	background-color: #004832;
+  background-color: var(--main-color);
+  color: #ffffff;
+  transform: translate(-50%,-50%);
+  text-decoration: none;
+}
+.bbq {
+  white-space: nowrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #004832;
+  color: var(--main-color);
+  transform: translate(-50%,-58px);
+  text-decoration: none;
+  }
+.camp {
+  white-space: nowrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #004832;
+  color: var(--main-color);
+  transform: translate(-50%,24px);
+  text-decoration: none;
+}
+
+
+
 /* --------------
 * main
 *------------- */
@@ -223,7 +304,7 @@ li.heroimg4{
   position: relative;
   z-index: 90;
   right: -87px;
-  top: -2px;
+  top: -3px;
 }
 
 .side1{
@@ -314,7 +395,7 @@ li.heroimg4{
   display: inline-block;
   width: 50%;
   max-width: 320px;
-  line-height: 2;
+  line-height: 3;
   border-radius: 32px;
 }
 .body-img{
@@ -389,6 +470,13 @@ li.heroimg4{
   font-size: 1.8rem;
   background: none;
   margin-bottom: 36px;
+
+  display: inline-block;
+  width: 50%;
+  max-width: 320px;
+  line-height: 2;
+  border-radius: 32px;
+  border: solid 1px var(--main-color);
 }
 
 /* ---------------
@@ -411,6 +499,9 @@ li.heroimg4{
 }
 .footer dl:last-child{
   padding-bottom: 32px;
+}
+.footer dt {
+  margin-right: 0.5em;
 }
 
 
@@ -550,6 +641,97 @@ img{
 /* --Navigationここまで-- */
 
 
+.heroimg{
+  background-color: #004832;
+  width: 100%;
+  height: auto;
+  margin-top: 50px;/* headerがfixed */
+}
+
+
+
+.bxslider>li{
+  width: 100%;
+  height: 62.5vw;
+  background-position: bottom 0 left 0;
+}
+
+
+.heroimg h1 {
+  color: #ffffff;
+  width: 100%;
+  box-sizing: border-box;
+  height: auto;
+  font-size: 2.6rem;
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  transform: translate(0, -10%);
+  filter: drop-shadow(-2px 2px 0px #000000);
+  padding: 10px 10px;
+  display: block;
+}
+.h1-space {
+  display: block;
+  width: 100%;
+  height: 1em;
+}
+
+/* top button */
+a.top-btn {
+  width: 100vw;
+  height: auto;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: solid 3px var(--main-color);
+  border-radius: 0;
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  font-weight: medium;
+  position: static;
+  display: block;
+  right: 80px;
+  bottom: 83px;
+  text-align: center;
+}
+
+.booking {
+  display:block;
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  line-height: 40px;
+  white-space: nowrap;
+  position: relative;
+  top: -4px;
+  left: 0;
+	background-color: #004832;
+  background-color: var(--main-color);
+  color: #ffffff;
+  transform: translate(0,0);
+}
+span.bbq,span.camp{
+  padding: 0 0.5em;
+  margin-top: 4px;
+  position: relative;
+  top: -4px;
+  left: 0;
+  transform: translate(0,0);
+  text-decoration: none;
+  display: inline-block;
+}
+.bbq {
+}
+.camp {
+  border-left: solid 3px var(--main-color);
+}
+
+
+
+
+
+
+
 /* --side-bar-- */
 .side-bar{
   display: var(--display-menu);
@@ -629,37 +811,6 @@ img{
 }
 
 
-
-.heroimg{
-  background-color: #004832;
-  width: 100%;
-  height: auto;
-  margin-top: 50px;/* headerがfixed */
-}
-
-
-
-.bxslider>li{
-  width: 100%;
-  height: 62.5vw;
-  background-position: bottom 0 left 0;
-}
-
-
-.heroimg h1 {
-  color: #ffffff;
-  width: 100%;
-  box-sizing: border-box;
-  height: auto;
-  font-size: 2.6rem;
-  position: absolute;
-  top: 10%;
-  left: 0;
-  transform: translate(0, 10%);
-  filter: drop-shadow(-2px 2px 0px #000000);
-  padding: 10px 10px;
-  display: block;
-}
 
 .body {
   display: block;
